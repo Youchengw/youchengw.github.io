@@ -266,14 +266,17 @@
         </div>
         <div class="d-flex flex-column col px-5 align-items-center align-self-center mh-100" style="overflow-y: scroll;">
           <div class="my-5" id="content">
-            <p>{</p>
-            <p>  "Name": "Youcheng Wang",</p>
-            <p>  "Email": "youchengw51@gmail.com",</p>
-            <p>  "Education": "Ph.D. student, Chemical Engineering &amp; Materials Science,</p>
-            <p>              University of Minnesota, Twin Cities</p>
-            <p>              B.S. in Chemistry, Zhiyuan College, SJTU"</p>
-            <p>}</p>
-            <p style="margin-top: 1.5rem;"><a href="bio.html">[View Bio &rarr;]</a></p>
+            <p class="section-header">/* About */</p>
+            <p>I am a Ph.D. student in the <a href="https://cse.umn.edu/cems">Department of Chemical Engineering and Materials Science</a> at the <a href="https://twin-cities.umn.edu/">University of Minnesota, Twin Cities</a>. Previously, I earned my B.S. in Chemistry from the <a href="https://zhiyuan.sjtu.edu.cn/">Zhiyuan College</a> (Zhiyuan Honors Program) at <a href="https://sjtu.edu.cn/">Shanghai Jiao Tong University</a>.</p>
+
+            <p class="section-header">/* Research Experience */</p>
+            <p>During my undergraduate studies, I worked with <a href="https://scce.sjtu.edu.cn/en/Faculty_Directory/340.html">Prof. Xiaodong Zhuang</a> at SJTU, and <a href="https://chemistry.northwestern.edu/people/core-faculty/profiles/joseph-hupp.html">Prof. Joseph T. Hupp</a> in the <a href="https://chemistry.northwestern.edu/">Department of Chemistry</a> at <a href="https://northwestern.edu//">Northwestern University</a>.</p>
+
+            <p class="section-header">/* Research Interests */</p>
+            <p>My current research interests focus on AI4Science, particularly the integration of Molecular Dynamics (MD) simulations with Machine Learning.
+
+            <p class="section-header">/* Personal */</p>
+            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.</p>
           </div>
         </div>
       </div>
@@ -325,14 +328,17 @@
               </div>
             </div>
             <div class="p pt-4 px-5">
-            <p>{</p>
-            <p>  "Name": "Youcheng Wang",</p>
-            <p>  "Email": "youchengw51@gmail.com",</p>
-            <p>  "Education": "Ph.D. student, Chemical Engineering &amp; Materials Science,</p>
-            <p>              University of Minnesota, Twin Cities</p>
-            <p>              B.S. in Chemistry, Zhiyuan College, SJTU"</p>
-            <p>}</p>
-            <p style="margin-top: 1.5rem;"><a href="bio.html">[View Bio &rarr;]</a></p></div>
+            <p class="section-header">/* About */</p>
+            <p>I am a Ph.D. student in the <a href="https://cse.umn.edu/cems">Department of Chemical Engineering and Materials Science</a> at the <a href="https://twin-cities.umn.edu/">University of Minnesota, Twin Cities</a>. Previously, I earned my B.S. in Chemistry from the <a href="https://zhiyuan.sjtu.edu.cn/">Zhiyuan College</a> (Zhiyuan Honors Program) at <a href="https://sjtu.edu.cn/">Shanghai Jiao Tong University</a>.</p>
+
+            <p class="section-header">/* Research Experience */</p>
+            <p>During my undergraduate studies, I worked with <a href="https://scce.sjtu.edu.cn/en/Faculty_Directory/340.html">Prof. Xiaodong Zhuang</a> at SJTU, and <a href="https://chemistry.northwestern.edu/people/core-faculty/profiles/joseph-hupp.html">Prof. Joseph T. Hupp</a> in the <a href="https://chemistry.northwestern.edu/">Department of Chemistry</a> at <a href="https://northwestern.edu//">Northwestern University</a>.</p>
+
+            <p class="section-header">/* Research Interests */</p>
+            <p>My current research interests focus on AI4Science, particularly the integration of Molecular Dynamics (MD) simulations with Machine Learning.
+
+            <p class="section-header">/* Personal */</p>
+            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.</p></div>
         </div>
       </div>
     </div>
@@ -360,10 +366,6 @@
             if (i < html.length) {
               if (html[i] === '<') {
                 var end = html.indexOf('>', i);
-                buffer += html.substring(i, end + 1);
-                i = end + 1;
-              } else if (html[i] === '&') {
-                var end = html.indexOf(';', i);
                 buffer += html.substring(i, end + 1);
                 i = end + 1;
               } else {
