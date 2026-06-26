@@ -19,8 +19,8 @@
 
       body {
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
-        background-color: #0D1117;
-        color: #3BF080;
+        background-color: #1E1E1E;
+        color: #D4D4D4;
         font-weight: 400;
         line-height: 1.6;
       }
@@ -29,18 +29,18 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-weight: 700;
         font-size: 1.6rem;
-        color: #3BF080;
+        color: #D4D4D4;
       }
 
       h1::before {
         content: '/* ';
-        color: #1A6B3A;
+        color: #808080;
         font-weight: 400;
       }
 
       h1::after {
         content: ' */';
-        color: #1A6B3A;
+        color: #808080;
         font-weight: 400;
       }
 
@@ -48,13 +48,13 @@
       .email {
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-size: 0.8rem;
-        color: #1A6B3A;
+        color: #808080;
         margin-top: -8px;
       }
 
       .email::before {
         content: '// ';
-        color: #1A6B3A;
+        color: #808080;
       }
 
       p {
@@ -65,14 +65,14 @@
 
       p:not(.section-header):not(.email)::before {
         content: '❯ ';
-        color: #1A6B3A;
+        color: #808080;
         font-weight: 500;
       }
 
       /* Code-comment section headers */
       .section-header {
         font-weight: 700;
-        color: #66FF99;
+        color: #569CD6;
         margin-top: 28px;
         margin-bottom: 4px;
       }
@@ -83,7 +83,7 @@
 
       /* Blinking cursor — always animated, hidden by parent visibility:hidden until revealed */
       .cursor {
-        color: #3BF080;
+        color: #D4D4D4;
         font-weight: 700;
         animation: blink 1s step-end infinite;
       }
@@ -91,7 +91,7 @@
       /* Dynamic cursor during typing — follows the text */
       .typing::after {
         content: '█';
-        color: #3BF080;
+        color: #D4D4D4;
         animation: blink 1s step-end infinite;
       }
 
@@ -101,16 +101,16 @@
       }
 
       a {
-        color: #3BF080;
+        color: #569CD6;
         text-decoration: underline;
         text-underline-offset: 3px;
-        text-decoration-color: #1A6B3A;
+        text-decoration-color: #808080;
         transition: color 0.15s ease, text-decoration-color 0.15s ease;
       }
 
       a:hover {
-        color: #66FF99;
-        text-decoration-color: #66FF99;
+        color: #9CDCFE;
+        text-decoration-color: #9CDCFE;
       }
 
       /* Code-token buttons — desktop */
@@ -118,18 +118,18 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-size: 0.82rem;
         font-weight: 500;
-        color: #3BF080;
+        color: #D4D4D4;
         background: transparent;
-        border: 1px solid #1A6B3A;
+        border: 1px solid #808080;
         border-radius: 3px;
         padding: 6px 14px;
         transition: all 0.15s ease;
       }
 
       .btn-outline-dark:hover {
-        background: #3BF080;
-        border-color: #3BF080;
-        color: #0D1117;
+        background: #264F78;
+        border-color: #569CD6;
+        color: #FFFFFF;
       }
 
       /* Code-token buttons — mobile */
@@ -137,9 +137,9 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-size: 0.85rem;
         font-weight: 500;
-        color: #3BF080;
+        color: #D4D4D4;
         background: transparent;
-        border: 1px solid #1A6B3A;
+        border: 1px solid #808080;
         border-radius: 3px;
         margin: 4px 0;
         text-decoration: none;
@@ -147,15 +147,15 @@
       }
 
       .list-group-item:hover {
-        background: #3BF080;
-        border-color: #3BF080;
-        color: #0D1117;
+        background: #264F78;
+        border-color: #569CD6;
+        color: #FFFFFF;
       }
 
       /* Content area — terminal gutter */
       #content {
-        background: #161B22;
-        border-left: 3px solid #3BF080;
+        background: #252526;
+        border-left: 3px solid #D4D4D4;
         padding-left: 28px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -164,7 +164,7 @@
 
       hr {
         border: none;
-        border-top: 1px dashed #1A6B3A;
+        border-top: 1px dashed #808080;
       }
 
       .profile-img {
@@ -173,9 +173,9 @@
         max-width: 100%;
         border-radius: 0;
         object-fit: contain;
-        border: 2px solid #3BF080;
+        border: 2px solid #D4D4D4;
         padding: 4px;
-        background: #161B22;
+        background: #252526;
       }
 
       /* Make list-inline (button container) not show bullets */
