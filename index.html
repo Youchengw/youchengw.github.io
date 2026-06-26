@@ -88,6 +88,13 @@
         animation: blink 1s step-end infinite;
       }
 
+      /* Dynamic cursor during typing — follows the text */
+      .typing::after {
+        content: '█';
+        color: #3BF080;
+        animation: blink 1s step-end infinite;
+      }
+
       @keyframes blink {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
@@ -270,7 +277,7 @@
             <p>My current research interests focus on AI4Science, particularly the integration of Molecular Dynamics (MD) simulations with Machine Learning.
 
             <p class="section-header">/* Personal */</p>
-            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.<span class="cursor">█</span></p>
+            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.</p>
           </div>
         </div>
       </div>
@@ -332,7 +339,7 @@
             <p>My current research interests focus on AI4Science, particularly the integration of Molecular Dynamics (MD) simulations with Machine Learning.
 
             <p class="section-header">/* Personal */</p>
-            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.<span class="cursor">█</span></p></div>
+            <p>Beyond the lab, I enjoy pop music and movies and I am also learning Cantonese culture.</p></div>
         </div>
       </div>
     </div>
@@ -353,6 +360,7 @@
           var html = el.innerHTML;
           el.style.visibility = 'visible';
           el.innerHTML = '';
+          el.classList.add('typing');
           var i = 0;
           function typeChar() {
             if (i < html.length) {
@@ -366,6 +374,7 @@
               }
               setTimeout(typeChar, speed);
             } else {
+              el.classList.remove('typing');
               if (callback) callback();
             }
           }
@@ -389,10 +398,15 @@
           next();
         }
 
-        // Sequence: name → email → content
+        // Sequence: name → email → content, then keep cursor on last paragraphs
         typeList(h1s, function() {
           typeList(emails, function() {
-            typeList(content);
+            typeList(content, function() {
+              var lastDesktop = document.querySelector('#content p:last-of-type');
+              var lastMobile = document.querySelector('.px-5 > p:last-of-type');
+              if (lastDesktop) lastDesktop.classList.add('typing');
+              if (lastMobile) lastMobile.classList.add('typing');
+            });
           });
         });
       })();
