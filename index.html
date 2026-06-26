@@ -14,8 +14,8 @@
 
       body {
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
-        background-color: #F3F3F3;
-        color: #1E1E1E;
+        background-color: #0D1117;
+        color: #3BF080;
         font-weight: 400;
         line-height: 1.6;
       }
@@ -24,19 +24,32 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-weight: 700;
         font-size: 1.6rem;
-        color: #1E1E1E;
+        color: #3BF080;
       }
 
       h1::before {
         content: '/* ';
-        color: #6A737D;
+        color: #1A6B3A;
         font-weight: 400;
       }
 
       h1::after {
         content: ' */';
-        color: #6A737D;
+        color: #1A6B3A;
         font-weight: 400;
+      }
+
+      /* Email line under name */
+      .email {
+        font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+        font-size: 0.8rem;
+        color: #1A6B3A;
+        margin-top: -8px;
+      }
+
+      .email::before {
+        content: '// ';
+        color: #1A6B3A;
       }
 
       p {
@@ -47,31 +60,31 @@
 
       p::before {
         content: '❯ ';
-        color: #6A737D;
+        color: #1A6B3A;
         font-weight: 500;
       }
 
       a {
-        color: #0451A5;
+        color: #3BF080;
         text-decoration: underline;
         text-underline-offset: 3px;
-        text-decoration-color: #BFC7D0;
+        text-decoration-color: #1A6B3A;
         transition: color 0.15s ease, text-decoration-color 0.15s ease;
       }
 
       a:hover {
-        color: #007ACC;
-        text-decoration-color: #007ACC;
+        color: #66FF99;
+        text-decoration-color: #66FF99;
       }
 
       p a::before {
         content: '[';
-        color: #6A737D;
+        color: #1A6B3A;
       }
 
       p a::after {
         content: ']';
-        color: #6A737D;
+        color: #1A6B3A;
       }
 
       /* Code-token buttons — desktop */
@@ -79,18 +92,18 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-size: 0.82rem;
         font-weight: 500;
-        color: #1E1E1E;
+        color: #3BF080;
         background: transparent;
-        border: 1px solid #BFC7D0;
+        border: 1px solid #1A6B3A;
         border-radius: 3px;
         padding: 6px 14px;
         transition: all 0.15s ease;
       }
 
       .btn-outline-dark:hover {
-        background: #D6E4F0;
-        border-color: #007ACC;
-        color: #007ACC;
+        background: #3BF080;
+        border-color: #3BF080;
+        color: #0D1117;
       }
 
       /* Code-token buttons — mobile */
@@ -98,9 +111,9 @@
         font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
         font-size: 0.85rem;
         font-weight: 500;
-        color: #1E1E1E;
+        color: #3BF080;
         background: transparent;
-        border: 1px solid #BFC7D0;
+        border: 1px solid #1A6B3A;
         border-radius: 3px;
         margin: 4px 0;
         text-decoration: none;
@@ -108,15 +121,15 @@
       }
 
       .list-group-item:hover {
-        background: #D6E4F0;
-        border-color: #007ACC;
-        color: #007ACC;
+        background: #3BF080;
+        border-color: #3BF080;
+        color: #0D1117;
       }
 
-      /* Content area — code editor gutter */
+      /* Content area — terminal gutter */
       #content {
-        background: #FFFFFF;
-        border-left: 3px solid #BFC7D0;
+        background: #161B22;
+        border-left: 3px solid #3BF080;
         padding-left: 28px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -125,7 +138,7 @@
 
       hr {
         border: none;
-        border-top: 1px dashed #BFC7D0;
+        border-top: 1px dashed #1A6B3A;
       }
 
       .profile-img {
@@ -134,9 +147,9 @@
         max-width: 100%;
         border-radius: 0;
         object-fit: contain;
-        border: 2px solid #D4D4D4;
+        border: 2px solid #3BF080;
         padding: 4px;
-        background: #FFFFFF;
+        background: #161B22;
       }
 
       /* Make list-inline (button container) not show bullets */
@@ -165,6 +178,7 @@
             </div>
             <div class="p-2">
               <h1>Youcheng Wang</h1> <!--name under photo-->
+              <p class="email">youchengw51@gmail.com</p>
             </div>
             <hr style="width:60%;" />
             <div class="p-2">
@@ -248,6 +262,7 @@
             </div>
             <div class="p-2 text-center">
               <h1>Youcheng Wang</h1>
+              <p class="email">youchengw51@gmail.com</p>
             </div>
             <hr style="width:60%;" />
 
