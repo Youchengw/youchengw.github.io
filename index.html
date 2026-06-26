@@ -264,7 +264,6 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column vh-100 border-left"></div>
         <div class="d-flex flex-column col px-5 align-items-center align-self-center mh-100" style="overflow-y: scroll;">
           <div class="my-5" id="content">
             <p class="section-header">/* About */</p>
@@ -362,16 +361,18 @@
           el.innerHTML = '';
           el.classList.add('typing');
           var i = 0;
+          var buffer = '';
           function typeChar() {
             if (i < html.length) {
               if (html[i] === '<') {
                 var end = html.indexOf('>', i);
-                el.innerHTML += html.substring(i, end + 1);
+                buffer += html.substring(i, end + 1);
                 i = end + 1;
               } else {
-                el.innerHTML += html[i];
+                buffer += html[i];
                 i++;
               }
+              el.innerHTML = buffer;
               setTimeout(typeChar, speed);
             } else {
               el.classList.remove('typing');
