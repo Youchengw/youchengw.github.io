@@ -81,13 +81,10 @@
         content: none;
       }
 
-      /* Blinking cursor — hidden by parent visibility:hidden, then revealed by typewriter */
+      /* Blinking cursor — always animated, hidden by parent visibility:hidden until revealed */
       .cursor {
         color: #3BF080;
         font-weight: 700;
-      }
-
-      .cursor.active {
         animation: blink 1s step-end infinite;
       }
 
@@ -395,13 +392,7 @@
         // Sequence: name → email → content
         typeList(h1s, function() {
           typeList(emails, function() {
-            typeList(content, function() {
-              // Activate blinking cursors
-              var cursors = document.querySelectorAll('.cursor');
-              for (var c = 0; c < cursors.length; c++) {
-                cursors[c].classList.add('active');
-              }
-            });
+            typeList(content);
           });
         });
       })();
