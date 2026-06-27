@@ -42,7 +42,7 @@ def inject_bio(html, start_marker, end_marker, indent, bio_title):
     bio_html = md_to_html(open('bio.md').read())
     lines = bio_html.split('\n')
 
-    block = f'{indent}<p class="section-header bio-title">/** {bio_title} */</p>\n'
+    block = f'{indent}<p class="section-header bio-title">/* {bio_title} */</p>\n'
     for line in lines:
         block += f'{indent}{line}\n'
 
