@@ -13,7 +13,7 @@
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
 
       /* Hide typed elements until JS reveals them */
-      h1, .email, #content p, .px-5 > p {
+      h1, .email, #content p {
         visibility: hidden;
       }
 
@@ -406,7 +406,7 @@
         // Collect all elements to type in order
         var h1s = Array.from(document.querySelectorAll('h1'));
         var emails = Array.from(document.querySelectorAll('.email'));
-        var content = Array.from(document.querySelectorAll('#content p, .px-5 > p'));
+        var content = Array.from(document.querySelectorAll('#content p'));
 
         function typeList(list, callback) {
           var idx = 0;
@@ -425,9 +425,7 @@
           typeList(emails, function() {
             typeList(content, function() {
               var lastDesktop = document.querySelector('#content p:last-of-type');
-              var lastMobile = document.querySelector('.px-5 > p:last-of-type');
               if (lastDesktop) lastDesktop.classList.add('typing');
-              if (lastMobile) lastMobile.classList.add('typing');
             });
           });
         });
