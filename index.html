@@ -422,9 +422,7 @@
           typeChar();
         }
 
-        // Collect all elements to type in order
-        var h1s = Array.from(document.querySelectorAll('h1'));
-        var emails = Array.from(document.querySelectorAll('.email'));
+        // Collect bio content paragraphs to type
         var content = Array.from(document.querySelectorAll('#content p'));
 
         function typeList(list, callback) {
@@ -439,14 +437,10 @@
           next();
         }
 
-        // Sequence: name → email → content, then keep cursor on last paragraphs
-        typeList(h1s, function() {
-          typeList(emails, function() {
-            typeList(content, function() {
-              var lastDesktop = document.querySelector('#content p:last-of-type');
-              if (lastDesktop) lastDesktop.classList.add('typing');
-            });
-          });
+        // Type bio content, then keep cursor on last paragraph
+        typeList(content, function() {
+          var lastDesktop = document.querySelector('#content p:last-of-type');
+          if (lastDesktop) lastDesktop.classList.add('typing');
         });
       })();
     </script>
